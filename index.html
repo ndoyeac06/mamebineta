@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWA NDAO COUTURE BY BINETTE</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff0f5;
+}
+
+header {
+    background: #ff1493;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+nav {
+    background: black;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #ff1493;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 260px;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ff1493;
+}
+
+button {
+    background: #ff1493;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #e6007e;
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+fieldset {
+    border: 2px solid #ff1493;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #ff1493;
+}
+
+.payments a {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Bienvenue chez AWA NDAO COUTURE BY BINETTE</h1>
+<p>Grand Mbao côté école El Hadji Babacar Cissé</p>
+</header>
+
+<nav>
+<a href="#presentation">Présentation</a>
+<a href="#gallery">Galerie</a>
+<a href="#order">Commande</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section id="presentation">
+<h2>Présentation de l'Atelier</h2>
+<p>
+AWA NDAO COUTURE BY BINETTE est un atelier de couture spécialisé
+dans les vêtements sur mesure pour femmes, alliant élégance,
+qualité et précision.
+</p>
+
+<div class="gallery">
+<img src="images/atelier1.jpg" alt="Atelier couture">
+</div>
+</section>
+
+<section id="gallery">
+<h2>Nos Créations</h2>
+<div class="gallery">
+<img src="images/robe_bleue.jpg" alt="Robe bleue">
+<img src="images/robe_rose.jpg" alt="Robe rose">
+</div>
+</section>
+
+<section id="order">
+<h2>Passer une commande</h2>
+
+<form id="orderForm">
+
+<h3>Informations client</h3>
+<label>Nom complet</label>
+<input type="text" id="name" required>
+
+<label>Téléphone</label>
+<input type="tel" id="phone" required>
+
+<label>Modèle souhaité</label>
+<select id="modele" required>
+<option value="Robe">Robe</option>
+<option value="Boubou">Boubou</option>
+<option value="Ensemble">Ensemble</option>
+<option value="Autre">Autre</option>
+</select>
+
+<label>Type de tissu</label>
+<input type="text" id="fabric" required>
+
+<label>Couleur</label>
+<input type="text" id="color" required>
+
+<label>Acompte</label>
+<select id="deposit" required>
+<option value="5000">5000 F (tissu apporté)</option>
+<option value="15000">15000 F (tissu fourni)</option>
+</select>
+
+<label>Détails supplémentaires</label>
+<textarea id="details" rows="3"></textarea>
+
+<fieldset>
+<legend>Fiche de mesures (cm)</legend>
+
+<label>Poitrine</label>
+<input type="number" id="poitrine" required>
+
+<label>Tour de taille</label>
+<input type="number" id="taille" required>
+
+<label>Tour de hanches</label>
+<input type="number" id="hanches" required>
+
+<label>Épaules</label>
+<input type="number" id="epaules" required>
+
+<label>Longueur de la robe</label>
+<input type="number" id="longueurRobe" required>
+
+<label>Longueur des manches</label>
+<input type="number" id="manches">
+
+<label>Tour de bras</label>
+<input type="number" id="bras">
+</fieldset>
+
+<h3>Paiement pour validation</h3>
+<div class="payments">
+<a href="https://orangemoney.orange.sn" target="_blank">
+<button type="button">Payer avec Orange Money</button>
+</a>
+<a href="https://www.wave.com/sn/" target="_blank">
+<button type="button">Payer avec Wave</button>
+</a>
+</div>
+
+<br>
+<button type="submit">Envoyer la commande</button>
+</form>
+</section>
+
+<section id="merci" class="hidden">
+<h2>Merci pour votre commande 💖</h2>
+<p>Veuillez envoyer les informations sur WhatsApp pour validation finale.</p>
+<a id="whatsappLink" target="_blank">
+<button>Envoyer sur WhatsApp</button>
+</a>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>📞 +221 78 423 49 97</p>
+<p>📍 Grand Mbao, Dakar</p>
+</section>
+
+<footer>
+&copy; 2025 AWA NDAO COUTURE BY BINETTE
+</footer>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const message = `
+🧵 NOUVELLE COMMANDE COUTURE
+
+Nom: ${name.value}
+Téléphone: ${phone.value}
+Modèle: ${modele.value}
+Tissu: ${fabric.value}
+Couleur: ${color.value}
+Acompte: ${deposit.value} F
+
+📏 MESURES (cm)
+Poitrine: ${poitrine.value}
+Taille: ${taille.value}
+Hanches: ${hanches.value}
+Épaules: ${epaules.value}
+Longueur: ${longueurRobe.value}
+Manches: ${manches.value}
+Bras: ${bras.value}
+
+Détails: ${details.value}
+`;
+
+    document.getElementById("whatsappLink").href =
+        "https://wa.me/221784234997?text=" + encodeURIComponent(message);
+
+    document.getElementById("order").classList.add("hidden");
+    document.getElementById("merci").classList.remove("hidden");
+});
+</script>
+
+</body>
+</html>
